@@ -3,8 +3,16 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+interface RootState {
+  message: string;
+}
+
+const state: RootState = {
+  message: "olleH",
+};
+
 export default new Vuex.Store({
-  state: {},
+  state,
   mutations: {},
   actions: {},
   modules: {},
