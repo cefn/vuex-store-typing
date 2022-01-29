@@ -127,16 +127,15 @@
 </template>
 
 <script lang="ts">
+import { mapRootState } from "@/store";
 import Vue from "vue";
 
 export default Vue.extend({
   name: "HelloWorld",
-  props: {
-    msg: String,
-  },
   computed: {
+    ...mapRootState(["message"]),
     backwardsMessage(): string {
-      const chars = this.$store.state.message.split("");
+      const chars = this.message.split("");
       chars.reverse();
       return chars.join("");
     },
