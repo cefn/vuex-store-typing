@@ -11,9 +11,13 @@ const state: RootState = {
   message: "olleH",
 };
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state,
   mutations: {},
   actions: {},
   modules: {},
 });
+
+export type HelloStore = typeof store;
+
+export default store;
